@@ -1,0 +1,111 @@
+:root {
+    --bg-color: #1f1f1f;
+    --calculator-bg: #ffffff;
+    --text-color: #000;
+    --btn-bg: #f2f2f2;
+    --btn-hover: #ddd;
+    --operator-bg: #ffd54f;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --calculator-bg: #1e1e1e;
+    --text-color: #fff;
+    --btn-bg: #2c2c2c;
+    --btn-hover: #3a3a3a;
+    --operator-bg: #ffa000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    position: relative;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: var(--btn-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.calculator-container {
+    background-color: var(--calculator-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 24px;
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    background: var(--btn-bg);
+    color: var(--text-color);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.operator {
+    background-color: var(--operator-bg);
+    color: #000;
+}
+
+.operator:hover {
+    background-color: #ffc107;
+}
+
+@media (max-width: 400px) {
+    .calculator-container {
+        width: 90vw;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    #display {
+        font-size: 24px;
+    }
+}
