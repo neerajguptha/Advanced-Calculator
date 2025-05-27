@@ -1,4 +1,3 @@
-# Calculator
 
 # 🧮 Advanced Calculator
 
